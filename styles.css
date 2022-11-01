@@ -9,19 +9,27 @@ body {
 }
 
 main {
-    margin: 250px 60px 15px 60px;
-    
+    margin-top: 100px;
 }
 
 body section {
     display: flex;
 }
+
+
 h1 {
     font-size: 35px;
     text-transform: uppercase;
     font-weight: 300;
     margin-bottom: 15px;
 }
+
+/*IKON - NYHEDER*/
+h1 i {
+    margin-right: 20px;
+}
+
+
 h2{ 
     font-size:1.4em;
     font-weight: 400;
@@ -55,6 +63,17 @@ section img {
 }
 
 
+/*Første sektion med stort billede og tekst*/
+
+.stort_billede {
+    background-image: url(images/agf_stort_forside.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+    margin-bottom: 100px;
+}
+
+
 
 /*ARTIKEL OVERVIEW*/
 
@@ -82,7 +101,7 @@ header{
     justify-content:space-around;
     align-items:center;
 
-    background-color:darkslategrey;
+    background-color:rgb(23, 29, 53);
     border-bottom:1px solid rgba(255,255,255,0.5); /* Den lille linje i bunden. */
 }
 
@@ -95,6 +114,23 @@ Logo og burger */
 #navMobile > a > img{
     width:100%; 
 }
+
+
+/*Stort billede med tekst - 1. sektion*/
+
+
+
+.stort_billede h2 {
+    color: white;
+    font-size: 3em;
+    font-weight: 900;
+}
+
+.stort_billede p {
+    color: white;
+
+}
+
 
 /*1.række af artikler*/
 
@@ -301,6 +337,11 @@ The image is supposed to fill out the card and is therefore 100%.
         text-decoration:none;
         font-size:15pt;
         font-weight:bold;
+    }
+
+    .stort_billede div {
+        margin: 400px 0px 0px 200px;
+        width: 50%;
     }
 
     .tre_kolonner_stor, .tre_kolonner_version2_stor {
