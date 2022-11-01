@@ -5,8 +5,12 @@
 }
 
 body {
-    margin: 60px;
     font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+main {
+    margin: 250px 60px 15px 60px;
+    
 }
 
 body section {
@@ -50,6 +54,8 @@ section img {
     background-color: black;
 }
 
+
+
 /*ARTIKEL OVERVIEW*/
 
 .tre_kolonner div, .tre_kolonner_version2 div {
@@ -64,7 +70,30 @@ section img {
     color: white;
 }
 
+/* HEADER: */
+header{
+    position:fixed;
+    top:0px;
+    width:100%;
+    height:100px;
+    
+    display:flex; /* For at kunne distribuere boksene inden i.*/
+    justify-content:space-around;
+    align-items:center;
 
+    background-color:darkslategrey;
+    border-bottom:1px solid rgba(255,255,255,0.5); /* Den lille linje i bunden. */
+}
+
+/* Billeder skal fylde 100*% i deres container: 
+Logo og burger */
+#logo > img{
+    width:100%;
+}
+
+#navMobile > a > img{
+    width:100%; 
+}
 
 /*1.række af artikler*/
 
@@ -150,26 +179,76 @@ section img {
    
 }
 
-/*MOBIL*/
+/* RESPONSIVE: */
+/* MOBIL: */
+@media screen and (max-width:910px){
+    /*Distribuer elementer anderledes:*/
+    header{
+        justify-content:space-between ;
+        padding-left:10px;
+        padding-right:10px;
+        
+    }
+    
+    /* Skjul laptopmenuen. */
+    #navLaptop {
+        display:none; 
+    }
 
-@media screen and (max-width:768px){
+    /* Burgermenuen skal have en bredde */
+    #navMobile{ 
+        width:50px;
+    }
+
+    #logo{ /* Logoet skal være mindre på mobil. */
+        width:80px;
+    }    
+
     .tre_kolonner, .tre_kolonner_version2 {
         flex-direction: column;
     }
-    
 
     .tre_kolonner div, .tre_kolonner_version2 div {
         width: 100%;
     }
-
-   
-    
 }
 
-/*LAPTOP*/
 
-@media screen and (min-width:768px) {
-   
+
+
+/* LAPTOP: */
+@media screen and (min-width: 910px){
+    /* HEADER: LOGO*/
+    #logo {/* Logoet. Er i en div fordi det spiller bedre med flexbox. */
+        width:200px;
+        margin:30px;
+        position:relative;
+        top:70px;
+    }
+
+    /* Skjul mobilmenuen.*/
+    #navMobile{
+        display:none;
+    }
+
+    /* Vis laptopmenuen og samtidig gør den til flex container. */
+    #navLaptop {
+        display:flex; 
+        justify-content:space-around;
+        width:70%;
+        gap:10px;
+    }
+
+    /* Tekstlinks: */
+    nav > a{
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-transform:uppercase;
+        color:white;
+        text-decoration:none;
+        font-size:15pt;
+        font-weight:bold;
+    }
+
     .tre_kolonner_stor, .tre_kolonner_version2_stor {
         width: 50%;
     }
@@ -179,4 +258,3 @@ section img {
         width: 25%;
     }
 }
-
