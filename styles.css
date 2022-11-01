@@ -76,6 +76,7 @@ header{
     top:0px;
     width:100%;
     height:100px;
+    z-index: 100;
     
     display:flex; /* For at kunne distribuere boksene inden i.*/
     justify-content:space-around;
@@ -161,7 +162,6 @@ Logo og burger */
     filter: brightness(50%);
 }
 
-
 #sæsonkort div {
     width: 50%;
 }
@@ -175,9 +175,58 @@ Logo og burger */
     padding:15px 20px 15px 20px;
     text-decoration:none;
     text-transform: uppercase;
-    
-   
 }
+
+
+
+/* CARDS: */
+/* This is the box that contains the cards. 
+Responsibility: 
+- Display the cards with flexbox, 
+- Use flex wrap to make the cards go underneath each other when there is too little space.
+- Fill out the entire browser window.
+*/
+.cards {
+    display:flex;
+    justify-content:space-around;
+    width:100%;
+    flex-wrap:wrap;
+    margin-top: 100px;
+}
+
+/* This is the card itself. 
+This set of rules is for all sections inside the section with the class 'cards'.
+They have a fixed width for the wrapping to work!
+The height can be temporary, but they are supposed to be the same height regardless of the content.
+*/
+.cards div{
+    width:500px;
+    padding-bottom:5px;
+
+    background-color:white;
+    border:1px solid white;
+    border-radius:10px;
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:black;
+    text-transform:uppercase;
+    text-align:center;
+
+}
+
+.cards div p, .cards div h2{
+    margin:15px;
+}
+
+/* This is for images inside the cards. 
+The image is supposed to fill out the card and is therefore 100%.
+*/
+.cards img{
+    width:100%;
+    
+}
+
+
 
 /* RESPONSIVE: */
 /* MOBIL: */
@@ -211,6 +260,11 @@ Logo og burger */
     .tre_kolonner div, .tre_kolonner_version2 div {
         width: 100%;
     }
+    .cards div{
+        width:90%;
+        margin-bottom:10px;
+    }
+
 }
 
 
@@ -256,5 +310,9 @@ Logo og burger */
 
     .tre_kolonner_lille1, .tre_kolonner_lille2, .tre_kolonner_version2_lille1, .tre_kolonner_version2_lille2 {
         width: 25%;
+    }
+    .cards div{
+        width:30%;
+        margin-bottom:20px;
     }
 }
