@@ -1,0 +1,182 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 60px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+body section {
+    display: flex;
+}
+h1 {
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+h2{ 
+    font-size:1.4em;
+    font-weight: 400;
+    text-transform:uppercase;
+    font-weight:300;
+}
+
+h3 {
+    font-size: 20px;
+    color: white;
+    font-weight: 200;
+    padding: 0px 20px 0px 20px;
+    text-transform: uppercase;
+}
+
+h4 {
+    color: white;
+    margin: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+hr {
+    margin-bottom: 10px;
+}
+
+
+section img {
+    opacity: 0.8;
+    background-color: black;
+}
+
+/*ARTIKEL OVERVIEW*/
+
+.tre_kolonner div, .tre_kolonner_version2 div {
+    height: 350px;
+    margin: 7px;
+    border-radius: 20px;
+}
+
+.tre_kolonner p, .tre_kolonner_version2 p {
+    margin-left: 20px; ;
+    font-size: 10px;
+    color: white;
+}
+
+
+
+/*1.række af artikler*/
+
+.tre_kolonner_stor {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(images/fodbold1.jpg);
+    background-size: cover
+}
+
+.tre_kolonner_lille1  {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(images/fodbold2.webp) ;
+    background-size: cover;
+}
+
+.tre_kolonner_lille2 {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(images/fodbold3.jpg) ;
+    background-size: cover;
+}
+
+
+/*2. række af artikler*/
+
+.tre_kolonner_version2_lille1 {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(images/fodbold4.jpg) ;
+    background-size: cover;
+    background-color: black;
+}
+
+.tre_kolonner_version2_stor {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(images/fodbold5.jpg) ;
+    background-size: cover;
+}
+
+.tre_kolonner_version2_lille2 {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(images/fodbold6.jpg) ;
+    background-size: cover;
+}
+
+
+/*SÆSONKORT SEKTION*/
+
+
+/*Tekst*/
+
+
+#sæsonkort {
+    margin-top: 50px;
+    display: flex;
+}
+
+.sæsonkort_tekst {
+    padding-right: 50px;
+    padding-top: 50px;
+}
+
+#sæsonkort p {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+#sæsonkort img {
+    width: 100%;
+    height: auto;
+    border-radius:10px;
+    filter: brightness(50%);
+}
+
+
+#sæsonkort div {
+    width: 50%;
+}
+
+#sæsonkort a{ /* Knappen til at købe abonnement */
+    background-color:rgb(3, 3, 36);
+    font-size: 0.8em;
+    font-weight: 800;
+    border-radius:25px;
+    color:white;
+    padding:15px 20px 15px 20px;
+    text-decoration:none;
+    text-transform: uppercase;
+    
+   
+}
+
+/*MOBIL*/
+
+@media screen and (max-width:768px){
+    .tre_kolonner, .tre_kolonner_version2 {
+        flex-direction: column;
+    }
+    
+
+    .tre_kolonner div, .tre_kolonner_version2 div {
+        width: 100%;
+    }
+
+   
+    
+}
+
+/*LAPTOP*/
+
+@media screen and (min-width:768px) {
+   
+    .tre_kolonner_stor, .tre_kolonner_version2_stor {
+        width: 50%;
+    }
+
+
+    .tre_kolonner_lille1, .tre_kolonner_lille2, .tre_kolonner_version2_lille1, .tre_kolonner_version2_lille2 {
+        width: 25%;
+    }
+}
+
